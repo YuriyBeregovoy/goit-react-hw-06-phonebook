@@ -61,8 +61,6 @@ const  handleContactDelete = (contactId) => {
 
   useEffect(() => {localStorage.setItem("contactsPhonebook", JSON.stringify(contacts))}, [contacts]);
 
-
-  
     return (
       <Layout>
       <h1>Phonebook</h1>
