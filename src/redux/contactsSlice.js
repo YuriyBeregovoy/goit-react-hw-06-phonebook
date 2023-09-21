@@ -7,4 +7,12 @@ const contactsInitialState = [
     { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
 ];
 
-const contactsSlice = createSlice();
+const contactsSlice = createSlice({
+  name: "contacts",
+  initialState: contactsInitialState,
+
+  reducers: {},
+
+});
+
+export const contactsReducer = contactsSlice.reducer
