@@ -1,7 +1,8 @@
 import { FormButton, FormContacts, LabelContacts } from "./ContactForm.styled"
 import { useDispatch } from "react-redux";
 import { addContacts } from "redux/contactsSlice";
-import { nanoid } from 'nanoid'
+// import { nanoid } from 'nanoid'
+import { nanoid } from "@reduxjs/toolkit";
 
 
 export const ContactForm = () => {
@@ -15,8 +16,7 @@ export const ContactForm = () => {
      const number = form.elements.number.value;
     dispatch(addContacts({ name, number }));
     form.reset();
-    
-  }
+      }
   
 
   return  <FormContacts onSubmit={handleNameSet}>
