@@ -3,9 +3,6 @@ import { List } from "./ContactList.styled"
 import { useSelector } from "react-redux";
 
 
-
-
-
 export const ContactList = ({ onContactDelete }) => {
 const filter = useSelector((state) => state.filter.filter);
   const contacts = useSelector((state) => state.contacts);
