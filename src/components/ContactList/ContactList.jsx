@@ -15,10 +15,9 @@ const filter = useSelector((state) => state.filter.filter);
   };
   
 
- const filteredContacts = contacts.filter((contact) =>
-  typeof contact.name === "string" && contact.name.toLowerCase().includes(filter.toLowerCase())
-);
-
+   const filteredContacts = Array.isArray(contacts) ? contacts.filter((contact) =>
+    typeof contact.name === "string" && contact.name.toLowerCase().includes(filter.toLowerCase())
+  ) : [];
 
   return <List>
     {filteredContacts.map(contact => (
