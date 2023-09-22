@@ -5,9 +5,6 @@ import { nanoid } from "@reduxjs/toolkit";
 import { useSelector } from "react-redux";
 
 
-
-
-
 export const ContactForm = () => {
 
   const dispatch = useDispatch();
