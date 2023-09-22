@@ -1,6 +1,6 @@
 import { FormButton, FormContacts, LabelContacts } from "./ContactForm.styled"
 import { useDispatch } from "react-redux";
-import { addContacts } from "redux/contactsSlice";
+import { addContacts, updatePhonebook } from "redux/contactsSlice";
 import { nanoid } from "@reduxjs/toolkit";
 import { useSelector } from "react-redux";
 
@@ -8,7 +8,7 @@ import { useSelector } from "react-redux";
 export const ContactForm = () => {
 
   const dispatch = useDispatch();
- const contacts = useSelector((state) => state.contacts) || [];
+ const contacts = useSelector(updatePhonebook) || [];
    const handleNameSet = e => {
     e.preventDefault();
       const { name, number } = e.currentTarget.elements;
