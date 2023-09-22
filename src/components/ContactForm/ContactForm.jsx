@@ -14,8 +14,9 @@ export const ContactForm = () => {
       const { name, number } = e.currentTarget.elements;
      const newContact = { name: name.value, number: number.value, };
 
-     const isExistingContact = contacts.map((contact) => contact.name.toLowerCase()).includes(name.value.toLowerCase());
-
+  const isExistingContact = contacts.some(
+      (contact) => contact.name.toLowerCase() === newContact.name.toLowerCase()
+    );
   if (!isExistingContact) {
     dispatch(addContacts(newContact));
   } else {
