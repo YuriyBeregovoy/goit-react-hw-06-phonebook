@@ -19,8 +19,9 @@ key: 'root',
 };
 
 const rootReducer = combineReducers({
-  filter: filterReducer,
   contacts: contactsReducer,
+  filter: filterReducer,
+  
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
