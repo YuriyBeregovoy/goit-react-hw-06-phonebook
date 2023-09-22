@@ -8,11 +8,13 @@ import { useSelector } from "react-redux";
 export const ContactForm = () => {
 
   const dispatch = useDispatch();
- const contacts = useSelector((state) => state.contacts) || [];
+  const contacts = useSelector((state) =>  state.contacts.contacts) || [];
    const handleNameSet = e => {
     e.preventDefault();
       const { name, number } = e.currentTarget.elements;
      const newContact = { name: name.value, number: number.value, };
+     
+  console.log(contacts)
 
   const isExistingContact = contacts.find(
       contact => contact.name.toLowerCase() === newContact.name.toLowerCase()
