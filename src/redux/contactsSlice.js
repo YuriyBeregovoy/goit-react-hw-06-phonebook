@@ -31,6 +31,5 @@ const contactsSlice = createSlice({
 
   }
 });
-console.log('Початковий стан Redux-стору:', contactsInitialState);
 export const contactsReducer = contactsSlice.reducer;
 export const { addContacts, deleteContacts } = contactsSlice.actions;
