@@ -1,7 +1,6 @@
 import { FormButton, FormContacts, LabelContacts } from "./ContactForm.styled"
 import { useDispatch } from "react-redux";
 import { addContacts } from "redux/contactsSlice";
-// import { nanoid } from 'nanoid'
 import { nanoid } from "@reduxjs/toolkit";
 
 
@@ -23,7 +22,7 @@ export const ContactForm = () => {
       <LabelContacts htmlFor={nanoid()}>
           <span>Name</span>
           <input
-   
+        id = {nanoid()} 
         type="text"
         name="name"
         pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
